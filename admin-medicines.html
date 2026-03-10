@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Medicines</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<h2>💊 Admin – Medicines</h2>
+
+<div>
+<button onclick="openAddMedicine()">➕ Add Medicine</button>
+<button onclick="document.getElementById('csvFile').click()">📂 Import CSV</button>
+<input type="file" id="csvFile" accept=".csv" style="display:none">
+
+<button onclick="logout()">Logout</button>
+</div>
+
+</nav>
+
+
+<!-- ⚠ LOW STOCK ALERT -->
+<div id="lowStockAlert" class="alert-box"></div>
+
+
+<!-- ⏳ EXPIRY ALERT -->
+<div id="expiryAlert" class="alert-box"></div>
+
+
+<h3 style="text-align:center;">Medicines List</h3>
+
+
+<table border="1" width="90%" align="center">
+
+<thead>
+<tr>
+<th>Name</th>
+<th>Category</th>
+<th>Price</th>
+<th>Stock</th>
+<th>Expiry</th>
+<th>Actions</th>
+</tr>
+</thead>
+
+<tbody id="medicineTable"></tbody>
+
+</table>
+
+
+
+<!-- ADD MEDICINE MODAL -->
+
+<div id="addMedicineModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Add Medicine</h3>
+
+<input id="medName" placeholder="Medicine Name">
+
+<input id="medCategory" placeholder="Category">
+
+<input id="medPrice" placeholder="Price">
+
+<input id="medCost" placeholder="Cost Price">
+
+<input id="medStock" placeholder="Stock">
+
+<input id="medExpiry" type="date">
+
+<br><br>
+
+<button onclick="saveMedicine()">Save</button>
+<button onclick="closeAddMedicine()">Cancel</button>
+
+</div>
+
+</div>
+
+
+
+<script src="js/admin-medicines.js"></script>
+
+</body>
+</html>

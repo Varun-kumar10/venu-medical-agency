@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analytics | Venu Medical Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>📊 Business Analytics</h2>
+    <div>
+        <a href="admin.html">📦 Orders</a>
+        <a href="admin-medicines.html">Medicines</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </div>
+</nav>
+
+<!-- 💎 STATS CARDS -->
+<div class="stats">
+
+    <div class="stat-card revenue">
+        Total Revenue<br>
+        <span id="totalRevenueCard">₹ 0</span>
+    </div>
+
+    <div class="stat-card cost">
+        Total Cost<br>
+        <span id="totalCost">₹ 0</span>
+    </div>
+
+    <div class="stat-card profit">
+        Total Profit<br>
+        <span id="totalProfit">₹ 0</span>
+    </div>
+
+    <div class="stat-card margin">
+        Profit Margin<br>
+        <span id="profitMargin">0%</span>
+    </div>
+
+</div>
+
+<!-- 📅 Date Range Buttons -->
+<div style="text-align:center; margin:20px;">
+    <button id="btnAll">All Time</button>
+    <button id="btn7">Last 7 Days</button>
+    <button id="btn30">Last 30 Days</button>
+</div>
+
+<!-- 🔄 Chart Toggle -->
+<div style="text-align:center; margin-bottom:20px;">
+    <button id="toggleChartBtn">Switch Chart Type</button>
+</div>
+
+<!-- 📈 Monthly Revenue + Profit -->
+<div style="width:80%; margin:40px auto;">
+    <h3 style="text-align:center;">📈 Monthly Revenue vs Profit</h3>
+    <canvas id="revenueChart"></canvas>
+</div>
+
+<!-- 📅 Daily Revenue Trend -->
+<div style="width:80%; margin:40px auto;">
+    <h3 style="text-align:center;">📅 Daily Revenue Trend</h3>
+    <canvas id="dailyRevenueChart"></canvas>
+</div>
+
+<!-- 🏆 Top Selling Medicines -->
+<div style="width:80%; margin:40px auto;">
+    <h3 style="text-align:center;">🏆 Top Selling Medicines</h3>
+    <canvas id="topSellingChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/admin-revenue.js"></script>
+
+</body>
+</html>

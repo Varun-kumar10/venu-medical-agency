@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard | Venu Medical Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>💊 Venu Medical – Admin</h2>
+    <div>
+        <a href="admin-analytics.html">📊 Analytics</a>
+        <a href="admin-medicines.html">Medicines</a>
+        <button onclick="logoutAdmin()">Logout</button>
+    </div>
+</nav>
+
+<div class="stats">
+    <div class="stat-card">
+        Total Orders<br>
+        <span id="total">0</span>
+    </div>
+
+    <div class="stat-card pending">
+        Pending<br>
+        <span id="pending">0</span>
+    </div>
+
+    <div class="stat-card packed">
+        Packed<br>
+        <span id="packed">0</span>
+    </div>
+
+    <div class="stat-card delivered">
+        Delivered<br>
+        <span id="delivered">0</span>
+    </div>
+</div>
+
+<h3 style="text-align:center;">📦 Orders Dashboard</h3>
+
+<!-- 🔍 Search + Filter -->
+<div style="text-align:center; margin:20px;">
+    <input type="text" id="searchInput" placeholder="Search Order ID">
+
+    <select id="statusFilter">
+        <option value="">All Status</option>
+        <option value="Pending">Pending</option>
+        <option value="Packed">Packed</option>
+        <option value="Delivered">Delivered</option>
+    </select>
+
+    <button onclick="applyFilters()">Apply</button>
+</div>
+
+<div id="ordersList" class="admin-container"></div>
+
+<!-- 📄 Pagination -->
+<div id="pagination" style="text-align:center; margin:20px;"></div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | Venu Medical Agency</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h1>💊 Venu Medical Agency</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="medicines.html">Medicines</a></li>
+        <li><a href="cart.html">Cart</a></li>
+    </ul>
+</nav>
+
+<h2 style="text-align:center; margin:20px;">Checkout</h2>
+
+<div class="checkout-container">
+
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="text" id="phone" placeholder="Mobile Number" required>
+    <input type="email" id="email" placeholder="Email Address">
+    <textarea id="address" placeholder="Delivery Address" required></textarea>
+
+    <hr>
+
+    <!-- 🎟 AUTO SUGGESTION -->
+    <p id="couponSuggestion" style="color:blue; font-weight:bold;"></p>
+
+    <!-- 🎟 COUPON -->
+    <div class="coupon-box">
+        <input type="text" id="couponInput" placeholder="Enter Coupon Code">
+        <button type="button" onclick="applyCoupon()">Apply Coupon</button>
+        <p id="discountInfo" style="color:green;"></p>
+    </div>
+
+    <!-- 💰 PRICE SUMMARY -->
+    <div class="price-summary">
+        <p>Subtotal: ₹<span id="totalAmount">0</span></p>
+        <p>Discount: <span id="discountPercent">0</span>%</p>
+        <p>You Save: ₹<span id="discountAmount">0</span></p>
+        <h3>Final Total: ₹<span id="finalTotal">0</span></h3>
+    </div>
+
+    <button onclick="placeOrder()">Place Order</button>
+
+</div>
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

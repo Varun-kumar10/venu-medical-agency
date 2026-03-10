@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Success | Venu Medical</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <h2>🎉 Order Confirmed</h2>
+    <a href="index.html">Home</a>
+</nav>
+
+<div class="success-wrapper">
+
+    <div class="success-card">
+
+        <div class="success-icon">✅</div>
+
+        <h2>Order Placed Successfully!</h2>
+
+        <p>Thank you for shopping with Venu Medical 💊</p>
+
+        <hr>
+
+        <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+        <p><strong>Final Amount:</strong> ₹<span id="finalAmount"></span></p>
+        <p><strong>Estimated Delivery:</strong> <span id="deliveryDate"></span></p>
+
+        <hr>
+
+        <!-- Loyalty Points Section -->
+        <h3>🎁 Loyalty Rewards</h3>
+        <p>Points Earned: <strong id="earnedPoints">0</strong></p>
+        <p>Total Loyalty Points: <strong id="totalPoints">0</strong></p>
+
+        <hr>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <div class="step active">Pending</div>
+            <div class="step">Packed</div>
+            <div class="step">Delivered</div>
+        </div>
+
+        <div class="success-buttons">
+            <a href="track-order.html" class="btn">Track Order</a>
+            <a href="index.html" class="btn secondary">Continue Shopping</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/order-success.js"></script>
+
+</body>
+</html>       

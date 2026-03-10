@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Profile | Venu Medical</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <h2>👤 My Profile</h2>
+    <div class="nav-actions">
+        <button onclick="toggleDark()">🌙</button>
+        <a href="index.html">Home</a>
+        <button onclick="logoutUser()">🚪 Logout</button>
+    </div>
+</nav>
+
+<div class="profile-wrapper">
+<div class="profile-card">
+
+<!-- HEADER -->
+<div class="profile-header">
+    <label class="avatar-box">
+        <img id="avatarPreview" src="https://i.imgur.com/6VBx3io.png">
+        <input type="file" id="avatarInput" hidden>
+        <span class="edit-icon">✏️</span>
+    </label>
+
+    <h3 id="profileName">Your Name</h3>
+    <p id="profileEmail">your@email.com</p>
+</div>
+
+<!-- PROFILE COMPLETION -->
+<div class="progress-bar">
+    <div id="progressFill"></div>
+</div>
+
+<!-- PROFILE FORM -->
+<div class="profile-body">
+    <input id="name" placeholder="Full Name">
+    <input id="phone" placeholder="Phone Number">
+    <textarea id="address" placeholder="Address"></textarea>
+    <button onclick="updateProfile()">💾 Save Changes</button>
+</div>
+
+<!-- ADDRESS BOOK -->
+<h3>🏠 Address Book</h3>
+<div id="addressList"></div>
+<button onclick="addAddress()">➕ Add Address</button>
+<button onclick="openMap()">📍 Pick from Map</button>
+
+<div id="mapModal" class="map-modal">
+  <div class="map-box">
+    <h3>Select Address</h3>
+    <div id="map"></div>
+    <button onclick="savePickedAddress()">✅ Use this address</button>
+    <button onclick="closeMap()">❌ Cancel</button>
+  </div>
+</div>
+
+
+<!-- ORDER HISTORY -->
+<h3>📦 My Orders</h3>
+<div id="orderHistory"></div>
+
+</div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast">Saved successfully ✅</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9hrjgiUa_CZyl9TIU-8yXTxPX3C_XsgE&libraries=places"></script>
+
+
+
+<script src="js/profile.js"></script>
+</body>
+</html>
